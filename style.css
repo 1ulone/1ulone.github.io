@@ -39,14 +39,14 @@
     background: radial-gradient(#180161 25%, transparent 50%);
     background-size: 60% 80%;
     background-position: 0 0;
-    animation: c1 32s infinite linear;
+    animation: c1 28s infinite linear;
 }
 .c2
 {
     background:  radial-gradient(#eb3678 25%, transparent 50%);
     background-size: 70% 80%;
     background-position: 0 100%;
-    animation: c2 25s infinite linear;
+    animation: c2 21s infinite linear;
 }
 
 .c3
@@ -54,13 +54,13 @@
     background:   radial-gradient(#4f1787 25%, transparent 50%);
     background-size: 80% 80%;
     background-position: 50% 0;
-    animation: c3 30s infinite linear;
+    animation: c3 26s infinite linear;
 }
 .c4 {
     background:    radial-gradient(#fb773c 25%, transparent 50%);
     background-size: 80% 80%;
     background-position: 50% 100%;
-    animation: c4 20s infinite linear;
+    animation: c4 16s infinite linear;
 }
 
 @keyframes c1 {
