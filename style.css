@@ -1,0 +1,263 @@
+:root {
+	--main: #17153b;
+	--main-darker:#070f2b;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.gradient-wrap
+{
+  overflow: hidden;
+  width: 100%;
+  height:100vh;
+  position: relative;
+}
+
+.meshgradient>.color
+{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transform: scale(3) rotate(0deg);
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    background-repeat: no-repeat;
+    mix-blend-mode: overlay;
+}
+
+.c1
+{
+    background: radial-gradient(#180161 25%, transparent 50%);
+    background-size: 60% 80%;
+    background-position: 0 0;
+    animation: c1 32s infinite linear;
+}
+.c2
+{
+    background:  radial-gradient(#eb3678 25%, transparent 50%);
+    background-size: 70% 80%;
+    background-position: 0 100%;
+    animation: c2 25s infinite linear;
+}
+
+.c3
+{
+    background:   radial-gradient(#4f1787 25%, transparent 50%);
+    background-size: 80% 80%;
+    background-position: 50% 0;
+    animation: c3 30s infinite linear;
+}
+.c4 {
+    background:    radial-gradient(#fb773c 25%, transparent 50%);
+    background-size: 80% 80%;
+    background-position: 50% 100%;
+    animation: c4 20s infinite linear;
+}
+
+@keyframes c1 {
+  50%{
+  background-size: 80% 80%;
+   background-position: 50% 100%;
+    transform: scale(3) rotate(-75deg);
+  }
+}
+
+@keyframes c2 {
+  50%{
+    background-size: 80% 80%;
+   background-position: 50% 0;
+    transform: scale(3) rotate(90deg);
+  }
+}
+@keyframes c3 {
+  50%{
+  background-size: 70% 80%;
+   background-position: 0 100%;
+   transform: scale(3) rotate(8deg);
+  }
+}
+
+@keyframes c4 {
+  50%{
+   background-position: 0 0;
+  animation: c1 10s infinite;
+    transform: scale(3) rotate(-36deg);
+  }
+}
+
+body {  
+	background-color: var(--main);
+}
+
+iframe {
+	border: none;
+}
+i { color: white; }
+
+.bd {
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-areas: 
+		'header header header'
+		'main main main'
+		'footer footer footer';
+	grid-template-rows: 2fr 11.5fr 1fr;
+}
+
+.header {
+	grid-area: header;
+	width: 100%;
+	padding: 24px 0;
+	display: flex;
+	background-color: var(--main);
+	color: white;
+}
+
+.header div {
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+}
+
+.header button {
+	border: none;
+	background-color: var(--main);
+	font-size: 32px;
+	margin-left: 12px;
+}
+
+.body-index {
+	display: flex;
+}
+
+.main {
+	grid-area: main;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	display: flex;
+	flex-direction: column;
+	width:20vw;
+    left: -20vw;
+    height: 100%;
+    position: fixed;
+    transition: ease-in-out 0.5s;
+    z-index: 2;
+	background-color: var(--main-darker);
+}
+
+.sidebar button {
+	width: 80%;
+	margin: 5px auto;
+	padding: 5px 0;
+}
+
+.sidebar .side-head {
+	display: flex;
+	width: 80%;
+	margin: 5px auto;
+	align-items: center;
+	color: white;
+}
+
+.sidebar .side-head button {
+	width: 25%;
+	margin-left: 0;
+	border: none;
+	background-color: var(--main-darker);
+	transition: ease-in-out 0.2s;
+}
+
+.sidebar .side-head button:hover {
+	background-color: red;
+}
+
+.sidebar button {
+	background-color: var(--main-darker);
+	color: white;
+	border: none;
+	transition: ease-in-out 0.2s;
+}
+
+.sidebar button:hover {
+	color: #fb773c;
+	font-size: 14px;
+}
+
+.footer {
+	grid-area: footer;
+	text-align: center;
+	padding-top: 32px;
+	background-color: var(--main);
+	color: white;
+}
+
+.iframe-content {
+	height: 100vh;
+	width: 100%;
+}
+
+.block {
+	color: white;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+}
+
+svg {
+	position: absolute;
+	opacity: 0.4;
+}
+
+.block.gallery {
+	display: grid;
+	grid-template:repeat(4, 1fr) / repeat(4, 1fr);;
+	grid-gap: 5px;
+	margin: 10px auto;
+	width: 98%;
+	height: 95%;
+}
+
+.block.gallery img {
+	width: 100%;
+	height: 100%;
+	transition: ease-in-out 0.3s;
+}
+
+.block.gallery img:hover {
+	transform: scale(1.04, 1.04);
+}
+
+.plist {
+	height: 256px;
+	display: flex;
+	flex-direction: row;
+	margin: 16px 48px;
+}
+
+.plist .desc:hover .hidesc {
+	height: 100%;
+	font-size: larger;
+}
+
+.plist .desc .hidesc {
+	display: inline-block;
+	height: 0;
+	transition: ease-in-out 0.5s;
+}

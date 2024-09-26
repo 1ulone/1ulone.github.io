@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lb12</title>	
+	<link href="style.css" rel="stylesheet">
+</head>
+<body class="iframe-content">
+		<div class="meshgradient">
+                <div class="color c1"></div>
+                <div class="color c2"></div>
+                <div class="color c3"></div>
+                <div class="color c4"></div>
+        </div>
+
+		<svg 
+		  viewBox="0 0 5000 5000"
+		  xmlns='http://www.w3.org/2000/svg'>
+		
+		  <filter id='noiseFilter'>
+		    <feTurbulence 
+		      type='fractalNoise' 
+		      baseFrequency='0.65' 
+		      numOctaves='3' 
+		      stitchTiles='stitch' />
+		  </filter>
+		
+		  <rect
+		    width='1000%' 
+		    height='1000%' 
+			filter='url(#noiseFilter)' />
+		</svg>
+
+		<div class="block gradient-wrap">
+			<h1>Selamat Datang</h1>
+			<p>Explore Web dengan menggunakan tombol pada <b>Sidebar</b></p>
+		</div>
+</body>
+</html>

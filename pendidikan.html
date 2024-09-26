@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lb12</title>	
+	<link href="style.css" rel="stylesheet">
+</head>
+<body class="iframe-content">
+		<div class="meshgradient">
+                <div class="color c1"></div>
+                <div class="color c2"></div>
+                <div class="color c3"></div>
+                <div class="color c4"></div>
+        </div>
+
+		<svg 
+		  viewBox="0 0 5000 5000"
+		  xmlns='http://www.w3.org/2000/svg'>
+		
+		  <filter id='noiseFilter'>
+		    <feTurbulence 
+		      type='fractalNoise' 
+		      baseFrequency='0.65' 
+		      numOctaves='3' 
+		      stitchTiles='stitch' />
+		  </filter>
+		
+		  <rect
+		    width='1000%' 
+		    height='1000%' 
+			filter='url(#noiseFilter)' />
+		</svg>
+
+		<div class="block gradient-wrap">
+			<h1 style="margin-top: 5em;">Sejarah Pendidikan</h1>
+			<div class="plist">
+				<div class="desc">
+					<h3>TK</h3>
+					<div class="hidesc">
+						<h2>TK DARUL HIKAM</h2>
+						<p>(2009-2011)</p>
+					</div>
+				</div>
+				<div class="desc">
+					<h3>SD</h3>
+					<div class="hidesc">
+						<h2>SD DARUL HIKAM</h2>
+						<p>(2011-2017)</p>
+					</div>
+				</div>
+				<div class="desc">
+					<h3>SMP</h3>
+					<div class="hidesc">
+						<h2>SMP DARUL HIKAM</h2>
+						<p>(2017-2020)</p>
+					</div>
+				</div>
+				<div class="desc">
+					<h3>SMA</h3>
+					<div class="hidesc">
+						<h2>SMA TELKOM BANDUNG</h2>
+						<p>(2020-2023)</p>
+					</div>
+				</div>
+				<div class="desc">
+					<h3>NOW..</h3>
+					<div class="hidesc">
+						<h2>POLITEKNIK MANUFAKTUR BANDUNG</h2>
+						<p>(2023-NOW)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

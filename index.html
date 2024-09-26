@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ul0ne</title>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="body-index">
+	<div class="sidebar" id="sidebar">
+		<div class="side-head">
+			<button onclick="cancelSidebar()"><i class="bi-arrow-return-left"></i></button>
+			<h4>MENU</h4>
+		</div>
+		<button onclick="changeFrame('welcome.html')">Home</button>
+		<button onclick="changeFrame('keluarga.html')">History Keluarga</button>
+		<button onclick="changeFrame('pendidikan.html')">History Pendidikan</button>
+		<button onclick="changeFrame('gallery.html')">Gallery</button>
+	</div>
+	<div class="bd">
+		<div class="header">
+			<button onclick="onSidebar()"><i class="bi-list"></i></button>
+		
+			<div>
+				<h1>Praktikum Pemrograman Web</h1>
+				<p>223443087 - M.Ulwan Zuhdi - 2AEC4</p>
+			</div>
+		</div>
+		
+		<div class="main">
+			<iframe src="keluarga.html" width="100%" height="100%" id="main-frame"></iframe>
+		</div>
+			
+		<div class="footer">
+			<p>Ulwan - 2024</p>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+function onSidebar() { document.getElementById('sidebar').style.left = "0"; }
+function cancelSidebar() { document.getElementById('sidebar').style.left = "-20vw"; }
+function changeFrame(point) {
+	document.getElementById("main-frame").setAttribute("src",point);
+	cancelSidebar();
+}
+</script>
+
